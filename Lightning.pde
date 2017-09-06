@@ -1,5 +1,5 @@
 int xBegin = 200;
-int yBegin = 0;
+int yBegin = 15;
 int xEnd;
 int yEnd;
 void setup() {
@@ -7,15 +7,22 @@ void setup() {
   background(0,0,0);
 }
 void draw() {
+  fill(255);
+  noStroke();
+  ellipse(0,15,150,20);
+  ellipse(100,15,150,20);
+  ellipse(200,15,150,20);
+  ellipse(300,15,150,20);
+  ellipse(400,15,150,20);
   strokeWeight(5);
-  stroke(random(0,255),random(0,255),random(0,255));
-  xEnd = xBegin + (int)(Math.random()*random(-9,9));
+  stroke((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
+  xEnd = xBegin + (int)(Math.random()*(Math.random()*19-9));
   yEnd = yBegin + (int)(Math.random()*9);
   line(xBegin,yBegin,xEnd,yEnd);
   xBegin = xEnd;
   yBegin = yEnd;
   if (yBegin >= 400) {
-    yBegin = 0;
+    yBegin = 15;
     xBegin = 200;
     noLoop();
   }
