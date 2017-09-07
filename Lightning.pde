@@ -1,5 +1,5 @@
 int xBegin = 200;
-int yBegin = 15;
+int yBegin = 30;
 int xEnd;
 int yEnd;
 void setup() {
@@ -16,6 +16,10 @@ void draw() {
   ellipse(400,15,150,40);
   fill(#5E34EA);
   text("Kim Jong Un's Fun Vehicle of Best Korea", 100, 20);
+  fill(#1268C1);
+  rect(0,350,400,60);
+  fill(#C11229);
+  text("Stupid American Pigs", 150, 375);
   strokeWeight(5);
   stroke((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
   xEnd = xBegin + (int)(Math.random()*(Math.random()*19-9));
@@ -23,7 +27,7 @@ void draw() {
   line(xBegin,yBegin,xEnd,yEnd);
   xBegin = xEnd;
   yBegin = yEnd;
-  if (yBegin >= 400) {
+  if (yBegin >= 350) {
     yBegin = 15;
     xBegin = 200;
     noLoop();
