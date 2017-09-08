@@ -1,5 +1,5 @@
 int xBegin = 200;
-int yBegin = 30;
+int yBegin = 55;
 int xEnd;
 int yEnd;
 void setup() {
@@ -9,17 +9,34 @@ void setup() {
 void draw() {
   fill(#C15664);
   noStroke();
-  ellipse(0,15,150,40);
-  ellipse(100,15,150,40);
-  ellipse(200,15,150,40);
-  ellipse(300,15,150,40);
-  ellipse(400,15,150,40);
-  fill(#5E34EA);
-  text("Kim Jong Un's Fun Vehicle of Best Korea", 100, 20);
+  rect(150,15,100,40);
+  rect(250,35,40,10);
+  rect(290,15,20,40);
+  rect(130,20,20,20);
+  fill(#21408E);
+  rect(135,25,10,10);
+  fill(0);
+  textSize(9);
+  textAlign(CENTER);
+  text("Kim Jong Un's Fun Vehicle of Best Korea", 150, 20,100,150);
   fill(#1268C1);
   rect(0,350,400,60);
-  fill(#C11229);
-  text("Stupid American Pigs", 150, 375);
+  fill(#31D32F);
+  rect(100,350,200,30);
+  fill(#D39009);
+  rect(100,350,10,30);
+  fill(#0965D3);
+  rect(190,365,10,15);
+  fill(0);
+  textSize(10);
+  text("Stupid American Pigs", 200, 360);
+  noFill();
+  stroke(255);
+  ellipse(350,380,30,30);
+  ellipse(350,380,20,20);
+  ellipse(350,380,10,10);
+  ellipse(400,380,10,10);
+  ellipse(400,380,15,15);
   strokeWeight(5);
   stroke((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
   xEnd = xBegin + (int)(Math.random()*(Math.random()*19-9));
@@ -28,7 +45,7 @@ void draw() {
   xBegin = xEnd;
   yBegin = yEnd;
   if (yBegin >= 350) {
-    yBegin = 15;
+    yBegin = 55;
     xBegin = 200;
     noLoop();
   }
